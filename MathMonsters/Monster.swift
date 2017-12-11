@@ -28,15 +28,15 @@ class Monster {
     var weaponImage: UIImage {
         switch weapon {
         case .blowgun:
-            return UIImage(named: "blowgun")!
+            return #imageLiteral(resourceName: "blowgun.png")
         case .fire:
-            return UIImage(named: "fire")!
+            return #imageLiteral(resourceName: "fire.png")
         case .ninjaStar:
-            return UIImage(named: "ninjastar")!
+            return #imageLiteral(resourceName: "ninjastar.png")
         case .smoke:
-            return UIImage(named: "smoke")!
+            return #imageLiteral(resourceName: "smoke.png")
         case .sword:
-            return UIImage(named: "sword")!
+            return #imageLiteral(resourceName: "sword.png")
         }
     }
     

@@ -30,3 +30,9 @@ class DetailVC: UIViewController {
     }
 
 }
+
+extension DetailVC: MonsterSelectionDelegate {
+    func monsterSelected(_ newMonster: Monster) {
+        monster = newMonster
+    }
+}
