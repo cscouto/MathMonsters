@@ -9,6 +9,12 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Black</string>
+            <string>Avenir-Book</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--DetailVC-->
         <scene sceneID="amR-QH-AWM">
@@ -18,24 +24,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SkR-QT-8P1">
-                                <rect key="frame" x="166" y="323" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="deK-eU-dsD">
+                                <rect key="frame" x="8" y="72" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Pwo-M6-UVA"/>
+                                    <constraint firstAttribute="width" constant="100" id="f8y-Lm-osl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcm-I2-H01">
+                                <rect key="frame" x="116" y="72" width="251" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bMn-VH-gW8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uof-PF-YWi">
+                                <rect key="frame" x="116" y="120" width="251" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="giH-Oj-24X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preferred way to kill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcQ-CU-p0G">
+                                <rect key="frame" x="116" y="170" width="251" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qEs-tc-98E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rzS-90-tho">
+                                <rect key="frame" x="191" y="208" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="9sd-eC-cOJ"/>
+                                    <constraint firstAttribute="width" constant="100" id="YOn-uN-JNf"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="SkR-QT-8P1" firstAttribute="centerY" secondItem="XzE-9Z-lMH" secondAttribute="centerY" id="Prh-T4-nSK"/>
-                            <constraint firstItem="SkR-QT-8P1" firstAttribute="centerX" secondItem="XzE-9Z-lMH" secondAttribute="centerX" id="j03-hS-f1O"/>
+                            <constraint firstItem="P56-RJ-tuP" firstAttribute="trailing" secondItem="pcm-I2-H01" secondAttribute="trailing" constant="8" id="BTi-ir-3kw"/>
+                            <constraint firstItem="hcQ-CU-p0G" firstAttribute="leading" secondItem="deK-eU-dsD" secondAttribute="trailing" constant="8" id="HTv-Az-UuD"/>
+                            <constraint firstItem="rzS-90-tho" firstAttribute="centerX" secondItem="hcQ-CU-p0G" secondAttribute="centerX" id="IX5-2A-Uh7"/>
+                            <constraint firstItem="pcm-I2-H01" firstAttribute="leading" secondItem="deK-eU-dsD" secondAttribute="trailing" constant="8" id="PI5-NZ-edh"/>
+                            <constraint firstItem="deK-eU-dsD" firstAttribute="leading" secondItem="P56-RJ-tuP" secondAttribute="leading" constant="8" id="S9O-sb-G4f"/>
+                            <constraint firstItem="pcm-I2-H01" firstAttribute="top" secondItem="P56-RJ-tuP" secondAttribute="top" constant="8" id="UXo-jr-ErI"/>
+                            <constraint firstItem="hcQ-CU-p0G" firstAttribute="top" secondItem="Uof-PF-YWi" secondAttribute="bottom" constant="8" id="WEt-eQ-dv9"/>
+                            <constraint firstItem="deK-eU-dsD" firstAttribute="top" secondItem="P56-RJ-tuP" secondAttribute="top" constant="8" id="eH9-rr-qEV"/>
+                            <constraint firstItem="P56-RJ-tuP" firstAttribute="trailing" secondItem="Uof-PF-YWi" secondAttribute="trailing" constant="8" id="ecr-cv-FlZ"/>
+                            <constraint firstItem="rzS-90-tho" firstAttribute="top" secondItem="hcQ-CU-p0G" secondAttribute="bottom" constant="8" id="g7U-Gr-MfX"/>
+                            <constraint firstItem="Uof-PF-YWi" firstAttribute="leading" secondItem="deK-eU-dsD" secondAttribute="trailing" constant="8" id="jgq-0K-SFp"/>
+                            <constraint firstItem="Uof-PF-YWi" firstAttribute="top" secondItem="pcm-I2-H01" secondAttribute="bottom" constant="8" id="lkh-CP-MjB"/>
+                            <constraint firstItem="P56-RJ-tuP" firstAttribute="trailing" secondItem="hcQ-CU-p0G" secondAttribute="trailing" constant="8" id="zFL-DA-NyM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P56-RJ-tuP"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="Uof-PF-YWi" id="1Rf-du-m2l"/>
+                        <outlet property="iconImageView" destination="deK-eU-dsD" id="Ceg-Ud-vqE"/>
+                        <outlet property="nameLabel" destination="pcm-I2-H01" id="CX9-ny-U50"/>
+                        <outlet property="weaponImageView" destination="rzS-90-tho" id="NP3-55-s6S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="231-G8-tRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23" y="31"/>
+            <point key="canvasLocation" x="-23.199999999999999" y="30.134932533733135"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="AaE-tq-Jna">

@@ -9,11 +9,24 @@
 import UIKit
 
 class DetailVC: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var weaponImageView: UIImageView!
+    
+    var monster: Monster? {
+        didSet {
+            refreshUI()
+        }
+    }
+    
+    func refreshUI() {
+        loadViewIfNeeded()
+        nameLabel.text = monster?.name
+        descriptionLabel.text = monster?.description
+        iconImageView.image = monster?.icon
+        weaponImageView.image = monster?.weaponImage
     }
 
 }
